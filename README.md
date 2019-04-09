@@ -44,7 +44,15 @@ Wird nun die Antwort C ( man soll in einen See) angeklickt, wechselt Sprite 5 zu
 Antwort D (man versteckt sich in einer Grube) ist die richtige Antwort. Klickt man dieses erscheint eine Sandlandschaft mit Gruben und es wird dem Spieler mitgeteilt, dass diese Antwort richtig ist (Sprite 5 : *switch costume to hole*). Gleichzeit wird der Befehl *broadcast belohnungsschild* aktiv. Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (*recieve- go to*). Dies ist die Trophöenkiste. Wird dieses Sprite nun angeklickt, wird diese Kiste sozusagen geöffnet (*when I am clicked*) und es erscheint ein hellblauer Hintergrund. Zusätzlich wird der Befehl *broadcast belohnung* ausgeführt. Sprite 12 (roter Regenschirm), die erste Belohnung erhält diesen *Broadcast* und erscheint auf dem blauen Hintergrund links oben. Es hüpft auf und ab (*glide 1 secs to x:x position, y: y position + 5 - glide 1 secs to x: x position, y: y position - 5*). Dies wird wiederholt bis man es anklickt/auswählt (*repeat until touching mouse-pointer*).
 Ebenfalls auf dem blauen Hintergrund erscheint ein "Back-Button". Mit diesem kommt man wieder zu dem davorigen Hintergrund, um weiter zu spielen. Wenn man diesen Button anklickt werden zwei *Broadcasts* aktiv, einmal der der wieder zurück zu dem Hintergrund wechselt und der, der das Sprite 14 aktiviert. SPrite 14 ist ein "Next-Button" den man anklicken, um weiter zu spielen. Klickt man diesen an, kommt man durch den *broadcast Level up* und *broadcast new level* zu der nächsten Situation einer Stadt.
 
+## Design<a name="3"></a>
 
+Der Spieler ist eine Kuh. Dafür wurden viele verschiedene PNGs von Kühen für die Kostüme verwendet. Die grafische Darstellung (*Costumes* und *Stages*) wurden aus dem Internet importiert. Für die Hintergründe des ersten Levels haben wir einmal eine grüne Wiese verwendet, eine Hügellandschaft bei Nacht, einen See bei Gewitter und eine Sandlandschaft mit Gruben. Das zweite Level zeigt zunächst eine Straße in der Stadt und wird dann zu einer Straße in einer Landschaft. Zusätzlich wurden Animationen, sowie Grafik- und Soundeffekte eingefügt, um das Spiel visuell interessant zu gestalten und verschiedene Atmosphären zu kreieren.
 
+## Minispiele<a name="4"></a>
+
+Die Minuspiele wurden im Konzept schon erklärt. Sie sind dazu da, Variationen in das Spiel zu bringen und dementsprechend spannender zu machen. Trotzdessen, dass man Quize beantwortet und etwas lernt, soll dem Spieler das Spiel schließlich Spaß bringen und das Spiel den Spieler nicht langweilen, sondern unterhalten.
+
+## Level<a name="5"></a>
+Da es sich bei dem Spiel um eine Geschichte handelt, muss die Kuh natürlich verschiedene Etappen und Situationen durchlaufen. Dies wird in Form von verschiedenen Leveln gezeigt. Sie unterscheiden sich in ihrem Ort, der Aufgabe, der Minispiele und Belohnungen. So lernt der Spieler verschiedene Situationen kennen und es wird auf Dauer nicht langweilig.
 
 
