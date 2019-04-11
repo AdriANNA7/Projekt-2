@@ -37,8 +37,15 @@ Dies geschieht in dem Sprite 14 den Befehl *broadcast (hidenextbutton)* ausführ
 ![switch gewitter landschaft](https://user-images.githubusercontent.com/42734752/55952961-268c0280-5c5b-11e9-9f1e-205858ef9fe3.png)
 
 Desweiteren erhält der Spieler die nächste Anweisung (*think: Klicke x*).
-Klickt man nun die Taste x, erscheint eine Gewitterwolke plus Sound-Effekt (*play sound (...)*) und eine kleine Kuh (Sprite 5) und zwar durch den Control-Befehl *when x kex pressed* und *switch to costume - kuh-* (+ weitere *look-Befehle*). Der Spieler erhält die nächste Anweisung *say(...) klicke w*. Wird nun die Taste w gedrückt, erscheint das erste Quiz (*when w key pressed (...)switch to costume (...)*).
+Klickt man nun die Taste x, erscheint eine Gewitterwolke plus Sound-Effekt (*play sound (...)*) und eine kleine Kuh (Sprite 5) und zwar durch den Control-Befehl *when x kex pressed* und *switch to costume - kuh-* (+ weitere *look-Befehle*). Der Spieler erhält die nächste Anweisung *say(...) klicke w*. 
+
+![gewitter kuh](https://user-images.githubusercontent.com/42734752/55953060-6c48cb00-5c5b-11e9-8d1e-dc2d6eff3f9c.png)
+
+Wird nun die Taste w gedrückt, erscheint das erste Quiz (*when w key pressed (...)switch to costume (...)*).
 Das Quiz stellt die Frage, was die Kuh nun tun soll, da gleich in Blitz in der Nähe einschlagen wird. Dafür gibt es verschiedene Antwortmöglichkeite (A,B,C,D).
+
+![quiz frage 1](https://user-images.githubusercontent.com/42734752/55953144-a1edb400-5c5b-11e9-8b9d-23f27265a910.png)
+
 Klickt man A (man soll sich unter einen Baum stellen), wird Sprite 5 (die Kuh) unter einen Baum des Hintergundes verschoben (*when a key pressed (...) go to x:(...) and y(...)*).
 Nun schlägt ein Blitz(Sprite 2) direkt in den Baum ein (*when a key pressed (...) go to x:(...) and y:(...)*). Zusätzlich wird der Befehl *broadcast (Flammen)* eingefügt. Diesen Broadcast erfasst Sprite 6 durch *when I recieve (flammen)*. Dadurch erscheint eine Animation eines Feuers, so dass es aussieht als würde der Baum brennen. Dies erreicht man durch eine Kombination von Look- und Controlbefehlen. Sprite 6 (Flammen) ist einmal links und einmal rechts gedreht (spiegelverkehrt). Die genaue Programmierung sieht man im Folgenden Screenshot:
 
