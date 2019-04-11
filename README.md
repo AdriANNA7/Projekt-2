@@ -111,8 +111,34 @@ Wird nun die Antwort C ( man soll in einen See) angeklickt, wechselt Sprite 5 zu
 ![game over c](https://user-images.githubusercontent.com/42734752/55956219-b9309f80-5c63-11e9-832e-be999a9aa85d.png)
 
 
-Antwort D (man versteckt sich in einer Grube) ist die richtige Antwort. Klickt man dieses erscheint eine Sandlandschaft mit Gruben und es wird dem Spieler mitgeteilt, dass diese Antwort richtig ist (Sprite 5 : *switch costume to hole*). Gleichzeit wird der Befehl *broadcast belohnungsschild* aktiv. Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (*recieve- go to*). Dies ist die Trophöenkiste. Wird dieses Sprite nun angeklickt, wird diese Kiste sozusagen geöffnet (*when I am clicked*) und es erscheint ein hellblauer Hintergrund. Zusätzlich wird der Befehl *broadcast belohnung* ausgeführt. Sprite 12 (roter Regenschirm), die erste Belohnung erhält diesen *Broadcast* und erscheint auf dem blauen Hintergrund links oben. Es hüpft auf und ab (*glide 1 secs to x:x position, y: y position + 5 - glide 1 secs to x: x position, y: y position - 5*). Dies wird wiederholt bis man es anklickt/auswählt (*repeat until touching mouse-pointer*).
-Ebenfalls auf dem blauen Hintergrund erscheint ein "Back-Button". Mit diesem kommt man wieder zu dem davorigen Hintergrund, um weiter zu spielen. Wenn man diesen Button anklickt werden zwei *Broadcasts* aktiv, einmal der der wieder zurück zu dem Hintergrund wechselt und der, der das Sprite 14 aktiviert. SPrite 14 ist ein "Next-Button" den man anklicken, um weiter zu spielen. Klickt man diesen an, kommt man durch den *broadcast Level up* und *broadcast new level* zu der nächsten Situation einer Stadt.
+Antwort D (man versteckt sich in einer Grube) ist die richtige Antwort. Klickt man dieses erscheint eine Sandlandschaft mit Gruben und es wird dem Spieler mitgeteilt, dass diese Antwort richtig ist (Sprite 5 : *switch costume to hole*). Gleichzeit wird der Befehl *broadcast belohnungsschild* aktiv.
+
+![szenario d](https://user-images.githubusercontent.com/42734752/55956637-b1bdc600-5c64-11e9-8c6b-373a18358bf7.png)
+![d hintergrund script](https://user-images.githubusercontent.com/42734752/55956665-c26e3c00-5c64-11e9-98e4-919d066de680.png)
+
+Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (*recieve- go to*). Dies ist die Trophöenkiste. 
+
+![belohnungsschild bild](https://user-images.githubusercontent.com/42734752/55956729-e6318200-5c64-11e9-8998-8c34b873f102.png)
+![belohnungsschild erscheinen](https://user-images.githubusercontent.com/42734752/55956752-f3e70780-5c64-11e9-9835-16507e10e6a0.png)
+
+Wird dieses Sprite nun angeklickt, wird diese Kiste sozusagen geöffnet (*when I am clicked*) und es erscheint ein hellblauer Hintergrund. Zusätzlich wird der Befehl *broadcast belohnung* ausgeführt. Sprite 12 (roter Regenschirm), die erste Belohnung erhält diesen *Broadcast* und erscheint auf dem blauen Hintergrund links oben. 
+
+![offene trophäenkiste](https://user-images.githubusercontent.com/42734752/55956942-68ba4180-5c65-11e9-8a42-9b5c843ac4b2.png)
+![hellblauer hintergrund script](https://user-images.githubusercontent.com/42734752/55956983-84bde300-5c65-11e9-8896-a677a0d444f7.png)
+
+Es hüpft auf und ab (*glide 1 secs to x:x position, y: y position + 5 - glide 1 secs to x: x position, y: y position - 5*). Dies wird wiederholt bis man es anklickt/auswählt (*repeat until touching mouse-pointer*).
+
+![regenschirm script](https://user-images.githubusercontent.com/42734752/55957033-a0c18480-5c65-11e9-98dc-35dae50864a5.png)
+
+Ebenfalls auf dem blauen Hintergrund erscheint ein "Back-Button". Mit diesem kommt man wieder zu dem davorigen Hintergrund, um weiter zu spielen. Wenn man diesen Button anklickt werden zwei *Broadcasts* aktiv, einmal der der wieder zurück zu dem Hintergrund wechselt und der, der das Sprite 14 aktiviert. Sprite 14 ist ein "Next-Button" den man anklicken, um weiter zu spielen. 
+
+![back button](https://user-images.githubusercontent.com/42734752/55957160-e3835c80-5c65-11e9-9274-2dce939c7f08.png)
+![next butt0n 2](https://user-images.githubusercontent.com/42734752/55957158-e1210280-5c65-11e9-9aec-1b5a8ba0a9ee.png)
+
+Klickt man diesen an, kommt man durch den *broadcast Level up* und *broadcast new level* zu der nächsten Situation einer Stadt.
+
+![next level](https://user-images.githubusercontent.com/42734752/55957226-10d00a80-5c66-11e9-8bea-a8e335964244.png)
+
 
 ## Design<a name="3"></a>
 
