@@ -23,8 +23,20 @@ Wie der Name "Die Geschichte einer Kuh" schon erahnen lässt, handelt es sich be
 ## Aufbau/Konzept<a name="2"></a>
 
 Wenn die "kleine grüne Flagge" geklickt wird, startet das Spiel. Der Startbildschirm ist eine grüne Wieso und die Kuh schaut links "aus" dem Bildschirm.
+
+![start bildschirm](https://user-images.githubusercontent.com/42734752/55952502-14f62b00-5c5a-11e9-8620-43683c6a3d80.png)
+
 Klickt man diese nun (*when I am clicked*) an erzählt sie, dass sie aufbrechen will und fordert den Spieler auf ihr zu helfen.
-Zudem ist ein *next-button* (Sprite 14) auf dem Startbildschirm. Klickt man diesen an, kommt man zu der ersten Situation dem Gewitter. Dies geschieht in dem Sprite 14 den Befehl *broadcast (hidenextbutton)* ausführt. Diese "Nachricht erhält dann Sprite 4 durch den Control-Befehl *when I recieve* und der Hintergrund einer hügeligen dunklen Landschaft erscheint (*switch to costume*). Desweiteren erhält der Spieler die nächste Anweisung (*think: Klicke x*).
+Zudem ist ein *next-button* (Sprite 14) auf dem Startbildschirm. Klickt man diesen an, kommt man zu der ersten Situation dem Gewitter.
+
+![gewittter landschaft](https://user-images.githubusercontent.com/42734752/55952917-08be9d80-5c5b-11e9-8959-4db40ac6bd25.png)
+
+Dies geschieht in dem Sprite 14 den Befehl *broadcast (hidenextbutton)* ausführt. Diese "Nachricht erhält dann Sprite 4 durch den Control-Befehl *when I recieve* und der Hintergrund einer hügeligen dunklen Landschaft erscheint (*switch to costume*). 
+
+![next button 1](https://user-images.githubusercontent.com/42734752/55952939-1a07aa00-5c5b-11e9-896a-5cf6118dd7fb.png)
+![switch gewitter landschaft](https://user-images.githubusercontent.com/42734752/55952961-268c0280-5c5b-11e9-9f1e-205858ef9fe3.png)
+
+Desweiteren erhält der Spieler die nächste Anweisung (*think: Klicke x*).
 Klickt man nun die Taste x, erscheint eine Gewitterwolke plus Sound-Effekt (*play sound (...)*) und eine kleine Kuh (Sprite 5) und zwar durch den Control-Befehl *when x kex pressed* und *switch to costume - kuh-* (+ weitere *look-Befehle*). Der Spieler erhält die nächste Anweisung *say(...) klicke w*. Wird nun die Taste w gedrückt, erscheint das erste Quiz (*when w key pressed (...)switch to costume (...)*).
 Das Quiz stellt die Frage, was die Kuh nun tun soll, da gleich in Blitz in der Nähe einschlagen wird. Dafür gibt es verschiedene Antwortmöglichkeite (A,B,C,D).
 Klickt man A (man soll sich unter einen Baum stellen), wird Sprite 5 (die Kuh) unter einen Baum des Hintergundes verschoben (*when a key pressed (...) go to x:(...) and y(...)*).
