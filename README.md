@@ -101,7 +101,15 @@ Dann erscheint eine weitere Box mit einer zweiten Frage "Was ist die Einheit fü
 
 Wenn jetzt die Taste 1 geklickt wird, führt Sprite 10 den Befehl *Broadcast game over* aus und das Sprite mit dem Game over- Zeichen erhält dies und erscheint (wie in Antwort A) und das Spiel ist vorbei. Antwortet man richtig und wählt Ampere aus, wird der Befehl *tell Sprite 2: Broadcast new game* ausgeführt und das Quiz kann erneut beantwortet werden. Dazu wird der Befehl *tell Sprite 5 to set negative effect to 0* ausgeführt, da sonst das Quiz ebenfalls negativ angezeigt werden würde.
 
+![zurücksetzen negative effekt](https://user-images.githubusercontent.com/42734752/55956074-5c34e980-5c63-11e9-9a54-f4d550f047bd.png)
+
+
 Wird nun die Antwort C ( man soll in einen See) angeklickt, wechselt Sprite 5 zu einem See als Hintergrund (*whe c key pressed - switch costume*). Dazu erscheint Sprite 11 (Kuh-Kopf) und man sieht wie die Kuh erschrocken in dem See ist. Mit dem Befehl *broadcast* erscheint wieder das Game over - Zeichen. Bei dieser Antwort gibt es kein rettendes Mini-Spiel, da dies das "Worst-case-Szenario" darstellt.
+
+
+![szenario c](https://user-images.githubusercontent.com/42734752/55956172-99997700-5c63-11e9-8b7a-d06cafeae4b2.png)
+![game over c](https://user-images.githubusercontent.com/42734752/55956219-b9309f80-5c63-11e9-832e-be999a9aa85d.png)
+
 
 Antwort D (man versteckt sich in einer Grube) ist die richtige Antwort. Klickt man dieses erscheint eine Sandlandschaft mit Gruben und es wird dem Spieler mitgeteilt, dass diese Antwort richtig ist (Sprite 5 : *switch costume to hole*). Gleichzeit wird der Befehl *broadcast belohnungsschild* aktiv. Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (*recieve- go to*). Dies ist die Trophöenkiste. Wird dieses Sprite nun angeklickt, wird diese Kiste sozusagen geöffnet (*when I am clicked*) und es erscheint ein hellblauer Hintergrund. Zusätzlich wird der Befehl *broadcast belohnung* ausgeführt. Sprite 12 (roter Regenschirm), die erste Belohnung erhält diesen *Broadcast* und erscheint auf dem blauen Hintergrund links oben. Es hüpft auf und ab (*glide 1 secs to x:x position, y: y position + 5 - glide 1 secs to x: x position, y: y position - 5*). Dies wird wiederholt bis man es anklickt/auswählt (*repeat until touching mouse-pointer*).
 Ebenfalls auf dem blauen Hintergrund erscheint ein "Back-Button". Mit diesem kommt man wieder zu dem davorigen Hintergrund, um weiter zu spielen. Wenn man diesen Button anklickt werden zwei *Broadcasts* aktiv, einmal der der wieder zurück zu dem Hintergrund wechselt und der, der das Sprite 14 aktiviert. SPrite 14 ist ein "Next-Button" den man anklicken, um weiter zu spielen. Klickt man diesen an, kommt man durch den *broadcast Level up* und *broadcast new level* zu der nächsten Situation einer Stadt.
