@@ -75,6 +75,9 @@ Wenn dies nicht eintrifft, wird der 2)*Broadcast new game* ausgeführt (*if (1) 
 
 ![blitze minispiel a script](https://user-images.githubusercontent.com/42734752/55954055-feea6980-5c5d-11e9-816f-c9b08fb152d8.png)
 
+![game over script](https://user-images.githubusercontent.com/42734752/55955722-64405980-5c62-11e9-8ac3-e9bf93a596e9.png)
+![new game recieve quiz](https://user-images.githubusercontent.com/42734752/55955701-5ab6f180-5c62-11e9-8807-f84b4102eaa4.png)
+
 Wenn man nun Antwort B auswählt (die Kuh kann bleiben wo sie ist, da der Blitz *nur* in der Nähe einschlägt), wird die Kuh (Sprite 5) wieder in die Anfangsposition verschoben (*go to x:(...),y.(...)*). Der Blitz (Sprite 2) schlägt neben der Kuh ein (*show-go to x:(...),y:(...)*). Dazu erscheint Sprite 8 (eine visuelle Darstellung eines kreisförmigen elektrischen Feldes) (*when b key clicked-go to (...)*). Dieses breitet sich kreisförmig aus (*repeat 5 - change size by 15*). damit es auf der gleichen Position bleibt und sich nicht nach oben verschiebt (sich also nur erkennbar in x-Richtung vergrößert, wird der Befehl *change y by -15* eingefügt. Zusätzlich wird noch ein Sound-Effekt eingefügt.
 
 ![elektrisches Feld](https://user-images.githubusercontent.com/42734752/55955494-e11f0380-5c61-11e9-8b68-d8b79af37770.png)
@@ -87,7 +90,16 @@ Dazu wird ein negativer Grafikeffekt bei der Kuh (Sprite 5) erreicht, um es visu
 
 ![antwort b szenario](https://user-images.githubusercontent.com/42734752/55955466-cea4ca00-5c61-11e9-975c-4aa2f2f23417.png)
 
-Danach erscheint Sprite 10 (*when b key pressed - wait - show*), welches Infoboxen sind, wieso B falsch ist(fantasievoll/visuell). Dann erscheint eine weitere Box mit einer zweiten Frage "Was ist die Einheit für Stromstärke?". Diese Frage hat nur zwei Antwortmöglickeiten 1. Watt und 2. Ampere. Wenn jetzt die Taste 1 geklickt wird, führt Sprite 10 den Befehl *Broadcast game over* aus und das Sprite mit dem Game over- Zeichen erhält dies und erscheint (wie in Antwort A) und das Spiel ist vorbei. Antwortet man richtig und wählt Ampere aus, wird der Befehl *tell Sprite 2: Broadcast new game* ausgeführt und das Quiz kann erneut beantwortet werden. Dazu wird der Befehl *tell Sprite 5 to set negative effect to 0* ausgeführt, da sonst das Quiz ebenfalls negativ angezeigt werden würde.
+Danach erscheint Sprite 10 (*when b key pressed - wait - show*), welches Infoboxen sind, wieso B falsch ist(fantasievoll/visuell).
+
+![b info 1](https://user-images.githubusercontent.com/42734752/55955842-c6995a00-5c62-11e9-96c9-e4387b614f29.png)
+![b info 2](https://user-images.githubusercontent.com/42734752/55955865-d31db280-5c62-11e9-9dd2-1465f0be487b.png)
+
+Dann erscheint eine weitere Box mit einer zweiten Frage "Was ist die Einheit für Stromstärke?". Diese Frage hat nur zwei Antwortmöglickeiten 1. Watt und 2. Ampere. 
+
+![b frage 2](https://user-images.githubusercontent.com/42734752/55955883-dfa20b00-5c62-11e9-9d46-9a7559584dde.png)
+
+Wenn jetzt die Taste 1 geklickt wird, führt Sprite 10 den Befehl *Broadcast game over* aus und das Sprite mit dem Game over- Zeichen erhält dies und erscheint (wie in Antwort A) und das Spiel ist vorbei. Antwortet man richtig und wählt Ampere aus, wird der Befehl *tell Sprite 2: Broadcast new game* ausgeführt und das Quiz kann erneut beantwortet werden. Dazu wird der Befehl *tell Sprite 5 to set negative effect to 0* ausgeführt, da sonst das Quiz ebenfalls negativ angezeigt werden würde.
 
 Wird nun die Antwort C ( man soll in einen See) angeklickt, wechselt Sprite 5 zu einem See als Hintergrund (*whe c key pressed - switch costume*). Dazu erscheint Sprite 11 (Kuh-Kopf) und man sieht wie die Kuh erschrocken in dem See ist. Mit dem Befehl *broadcast* erscheint wieder das Game over - Zeichen. Bei dieser Antwort gibt es kein rettendes Mini-Spiel, da dies das "Worst-case-Szenario" darstellt.
 
