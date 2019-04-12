@@ -12,7 +12,7 @@
 
 ## Einleitung<a name="1"></a>
 
-Das **"Die Geschichte einer Kuh"** ist ein interaktives Lernspiel, wo der Spieler aus Sicht einer Kuh Hürden bewältigen muss, wobei er allgemeine Fakten lernt und Mini-Spiele spielt.
+Das **"Die Geschichte einer Kuh"**[http://tinyurl.com/diegeschichteeinerkuh] ist ein interaktives Lernspiel, wo der Spieler aus Sicht einer Kuh Hürden bewältigen muss, wobei er allgemeine Fakten lernt und Mini-Spiele spielt.
 
 Das Spiel ist mit dem Programm **Snap!** programmiert worden. Deswegen werden im Folgendem Begriffe der Programmiersprache Snap! verwendet, um zu erläutern, wie das Spiel funktioniert. Wir haben einige Ideen unseres ersten Spiels **Evolution Game** miteinfließen lassen und erweitert und zusätzlich auch neue Befehle etc. verwendet. Durch die Minispiele wurden viele verschiedene Funktionen von Snap! verwendet und gibt angehenden Programmierern eine gute Übersicht, was man alles mit Snap! programmieren kann.
 
@@ -22,7 +22,7 @@ Wie der Name "Die Geschichte einer Kuh" schon erahnen lässt, handelt es sich be
 
 ## Aufbau/Konzept<a name="2"></a>
 
-Wenn die "kleine grüne Flagge" geklickt wird, startet das Spiel. Der Startbildschirm ist eine grüne Wieso und die Kuh schaut links "aus" dem Bildschirm.
+Wenn die "kleine grüne Flagge" geklickt wird, startet das Spiel. Der Startbildschirm ist eine grüne Wiese und die Kuh schaut links "aus" dem Bildschirm.
 
 ![start bildschirm](https://user-images.githubusercontent.com/42734752/55952502-14f62b00-5c5a-11e9-8620-43683c6a3d80.png)
 
@@ -31,7 +31,7 @@ Zudem ist ein ***next-button*** (Sprite 14) auf dem Startbildschirm. Klickt man 
 
 ![gewittter landschaft](https://user-images.githubusercontent.com/42734752/55952917-08be9d80-5c5b-11e9-8959-4db40ac6bd25.png)
 
-Dies geschieht in dem Sprite 14 den Befehl ***broadcast (hidenextbutton)*** ausführt. Diese "Nachricht erhält dann Sprite 4 durch den Control-Befehl ***when I recieve*** und der Hintergrund einer hügeligen dunklen Landschaft erscheint (***switch to costume***). 
+Dies geschieht in dem Sprite 14 den Befehl ***broadcast (hidenextbutton)*** ausführt. Diese "Nachricht erhält dann Sprite 4 durch den Control-Befehl ***when I receive*** und der Hintergrund einer hügeligen dunklen Landschaft erscheint (***switch to costume***). 
 
 ![next button 1](https://user-images.githubusercontent.com/42734752/55952939-1a07aa00-5c5b-11e9-896a-5cf6118dd7fb.png)
 ![switch gewitter landschaft](https://user-images.githubusercontent.com/42734752/55952961-268c0280-5c5b-11e9-9f1e-205858ef9fe3.png)
@@ -47,7 +47,7 @@ Das Quiz stellt die Frage, was die Kuh nun tun soll, da gleich in Blitz in der N
 ![quiz frage 1](https://user-images.githubusercontent.com/42734752/55953144-a1edb400-5c5b-11e9-8b9d-23f27265a910.png)
 
 Klickt man A (man soll sich unter einen Baum stellen), wird Sprite 5 (die Kuh) unter einen Baum des Hintergundes verschoben (***when a key pressed (...) go to x:(...) and y(...)***).
-Nun schlägt ein Blitz(Sprite 2) direkt in den Baum ein (***when a key pressed (...) go to x:(...) and y:(...)***). Zusätzlich wird der Befehl ***broadcast (Flammen)*** eingefügt. Diesen Broadcast erfasst Sprite 6 durch ***when I recieve (flammen)***. Dadurch erscheint eine Animation eines Feuers, so dass es aussieht als würde der Baum brennen. 
+Nun schlägt ein Blitz(Sprite 2) direkt in den Baum ein (***when a key pressed (...) go to x:(...) and y:(...)***). Zusätzlich wird der Befehl ***broadcast (Flammen)*** eingefügt. Diesen Broadcast erfasst Sprite 6 durch ***when I receive (flammen)***. Dadurch erscheint eine Animation eines Feuers, so dass es aussieht als würde der Baum brennen. 
 
 ![blitz einschlag a](https://user-images.githubusercontent.com/42734752/55953361-32c48f80-5c5c-11e9-87f1-62ae5194efff.png)
 ![flammen bild](https://user-images.githubusercontent.com/42734752/55953380-3d7f2480-5c5c-11e9-979f-d3543f9cfeab.png)
@@ -69,8 +69,8 @@ Das Mini-Spiel setzt sich daraus zusammen, dass Blitz vom Himmel kommen und die 
 
 ![kuh bewegung minispiel a](https://user-images.githubusercontent.com/42734752/55953943-b59a1a00-5c5d-11e9-96b3-da34ae313458.png)
 
-Die Blitze sind wieder Sprite 2. Diese erscheinen durch den Befehl ***when space key pressed - show***. Diese Blitze schlagen nicht direkt ein, sondern gleiten die y-Achse herunter (***glide 5 secs to x: (pick random -240 to 240, y: -150***), damit der Spieler Zeit hat auszuweichen. Das ganze wird wiederholt bis die Zeit von 15 Sekunden abgelaufen ist oder der Blitz die Kuh berührt (***repeat until touching Sprite 5? or timer > 15***). Wenn der Blitz (Sprite 2) die Kuh (Sprite 5) berührt, ist das Spiel verloren und Sprite 2 führt 1)***Broadcast Game over*** aus. Dies erreicht Sprite 6 (***when I recieve "game over" - switch to costume game over***) und ein Schild mit "Game over" erscheint. Das Spiel ist vorbei.
-Wenn dies nicht eintrifft, wird der 2)***Broadcast new game*** ausgeführt (***if (1) else(2)***. Dies erreicht Sprite 5 (***when I recieve new game***) und das Sprite wird wieder zum Kostüm des Quizes und man kann dieses nochmal beantworten.
+Die Blitze sind wieder Sprite 2. Diese erscheinen durch den Befehl ***when space key pressed - show***. Diese Blitze schlagen nicht direkt ein, sondern gleiten die y-Achse herunter (***glide 5 secs to x: (pick random -240 to 240, y: -150***), damit der Spieler Zeit hat auszuweichen. Das ganze wird wiederholt bis die Zeit von 15 Sekunden abgelaufen ist oder der Blitz die Kuh berührt (***repeat until touching Sprite 5? or timer > 15***). Wenn der Blitz (Sprite 2) die Kuh (Sprite 5) berührt, ist das Spiel verloren und Sprite 2 führt 1)***Broadcast Game over*** aus. Dies erreicht Sprite 6 (***when I receive "game over" - switch to costume game over***) und ein Schild mit "Game over" erscheint. Das Spiel ist vorbei.
+Wenn dies nicht eintrifft, wird der 2)***Broadcast new game*** ausgeführt (***if (1) else(2)***. Dies erreicht Sprite 5 (***when I receive new game***) und das Sprite wird wieder zum Kostüm des Quizes und man kann dieses nochmal beantworten.
 
 ![blitze minispiel a script](https://user-images.githubusercontent.com/42734752/55954055-feea6980-5c5d-11e9-816f-c9b08fb152d8.png)
 
@@ -115,7 +115,7 @@ Antwort D (man versteckt sich in einer Grube) ist die richtige Antwort. Klickt m
 ![szenario d](https://user-images.githubusercontent.com/42734752/55956637-b1bdc600-5c64-11e9-8c6b-373a18358bf7.png)
 ![d hintergrund script](https://user-images.githubusercontent.com/42734752/55956665-c26e3c00-5c64-11e9-98e4-919d066de680.png)
 
-Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (***recieve- go to***). Dies ist die Trophöenkiste. 
+Dadurch erscheint oben rechts im Bildschirm ein kleines schwarzes Zeichen, welches eine Trophäe darstellen soll (***receive- go to***). Dies ist die Trophöenkiste. 
 
 ![belohnungsschild bild](https://user-images.githubusercontent.com/42734752/55956729-e6318200-5c64-11e9-8998-8c34b873f102.png)
 ![belohnungsschild erscheinen](https://user-images.githubusercontent.com/42734752/55956752-f3e70780-5c64-11e9-9835-16507e10e6a0.png)
